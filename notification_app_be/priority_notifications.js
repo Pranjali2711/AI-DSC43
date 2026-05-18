@@ -1,3 +1,7 @@
+const {
+  Log,
+} = require("../logging_middleware/logger");
+
 const notifications = [
   {
     Type: "Placement",
@@ -26,8 +30,13 @@ notifications.sort((a, b) => {
   );
 });
 
-console.log(
-  "Top Priority Notifications"
+Log(
+  "backend",
+  "info",
+  "service",
+  JSON.stringify(
+    notifications,
+    null,
+    2
+  )
 );
-
-console.log(notifications);

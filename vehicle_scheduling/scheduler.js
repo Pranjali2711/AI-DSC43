@@ -1,3 +1,7 @@
+const {
+  Log,
+} = require("../logging_middleware/logger");
+
 const vehicles = [
   {
     TaskID: "1",
@@ -60,7 +64,9 @@ const result = knapsack(
   mechanicHours
 );
 
-console.log(
-  "Maximum Operational Impact:",
-  result
+Log(
+  "backend",
+  "info",
+  "service",
+  `Maximum Operational Impact: ${result}`
 );
